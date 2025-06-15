@@ -15,13 +15,7 @@ const VideoPlayer = () => {
   return (
     <div className="div-video">
       <div className="video">
-        <ReactPlayer
-          url={currentVideo}
-          controls
-          width="100%"
-          height="100%"
-          className="react-player"
-        />
+        <ReactPlayer url={currentVideo} className="react-player" />
       </div>
 
       <div className="video-list">

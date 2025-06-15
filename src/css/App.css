@@ -1,32 +1,37 @@
+/* Container principal da tela */
 .div-video {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
   padding: 20px;
+  box-sizing: border-box;
 }
 
+/* Container do player */
 .video {
-  width: 80%;
+  width: 90%;
   max-width: 800px;
-  aspect-ratio: 16 / 9;
-  position: relative;
+  height: 50vh;
   margin-bottom: 20px;
 }
 
+/* Faz o player ocupar todo o espaço do .video */
 .react-player {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: 100% !important;
+  height: 100% !important;
 }
 
+/* Lista dos botões de vídeos */
 .video-list {
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 10px;
 }
 
+/* Botões */
 .video-button {
   padding: 10px 20px;
   border: none;
@@ -35,8 +40,21 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-size: 16px;
 }
 
 .video-button:hover {
   background-color: #005fa3;
+}
+
+/* Responsividade extra para telas pequenas */
+@media (max-width: 600px) {
+  .video {
+    height: 40vh;
+  }
+
+  .video-button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
 }
